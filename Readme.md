@@ -3,8 +3,8 @@
 <p align='center' style="font-size:25px;">🔥💯 V2 now supports multiple translations
 💯🔥</p>
 
-# 🔥 Setup ( Go to the usage section if you want to test it right away from my server )
-
+# 🔥 Setup
+!! ( Go to the usage section if you want to test it right away from my server )
 ## Packages
 ```
 > pip install "Flask[async]" flask-pydantic flask googletrans==3.1.0a0
