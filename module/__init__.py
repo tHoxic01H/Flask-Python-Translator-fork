@@ -1,4 +1,5 @@
 from flask import Flask, request
+from flask_cors import CORS
 from module.models.translation.TranslationModelV1 import TranslationModelV1
 from module.models.translation.TranslationModelV2 import TranslationModelV2
 from module.controllers.translation.translation_controller import translate_v1
@@ -7,7 +8,7 @@ from module.controllers.translation.translation_controller import translate_v2
 from flask_pydantic import validate
 
 app = Flask(__name__)
-
+CORS(app)
 @app.get("/")
 def root():
     return """
