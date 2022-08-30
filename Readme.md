@@ -3,7 +3,7 @@
 <p align='center' style="font-size:25px;">🔥💯 V2 now supports multiple translations
 💯🔥</p>
 
-# 🔥 Setup
+# 🔥 Setup ( Go to the usage section if you want to test it right away from my server )
 
 ## Packages
 ```
