@@ -8,10 +8,19 @@ from flask_pydantic import validate
 
 app = Flask(__name__)
 
-@app.route("/",methods=["POST"])
+@app.get("/")
 def root():
-    json_datas = request.get_json()
-    return json_datas
+    return """
+    <html>
+    <header>
+        <title>Python translator</title>
+    </header>
+    <body style="display:flex;justify-content:center;align-items:center;font-family:sans-serif">
+        <h1>Read the documentation <a href="#">here</a></h1>
+    </body>
+    </html>
+    """
+
 @app.route("/ping")
 async def ping():
     return {
