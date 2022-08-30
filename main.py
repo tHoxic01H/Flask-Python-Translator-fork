@@ -26,10 +26,11 @@ def translate_function_v2(body: TranslationModelV2):
     return res
 
 # Translate V1
-@app.route("/v1/translate")
-def translate_function_v1(translation_body_v1: TranslationModelV1):
-    res = translate_v1(translation_body_v1)
+@app.post("/v1/translate")
+@validate()
+def translate_function_v1(body: TranslationModelV1):
+    res = translate_v1(body)
     return res
 
-# if __name__ == "__main__":
-#     app.run(debug=True)
+if __name__ == "__main__":
+    app.run(debug=True)
