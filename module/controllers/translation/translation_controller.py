@@ -55,7 +55,7 @@ def translate_v2(translation_body_v2: TranslationModelV2):
     }
     return res
 
-# V2
+# V2 taloha
 def translate_v2_0(translation_body_v2: TranslationModelV2):
     # The texts to translate
     texts = translation_body_v2.texts
