@@ -4,11 +4,15 @@
 💯🔥</p>
 
 # 🔥 Setup
+
 !! ( Go to the usage section if you want to test it right away from my server )
+
 ## Packages
+
 ```
 > pip install "Flask[async]" flask-pydantic flask googletrans==3.1.0a0
 ```
+
 ## Create a virtual environment for python
 
 ```
@@ -22,6 +26,7 @@
 ```
 
 ## Packages
+
 ```
 > pip install "Flask[async]" flask-pydantic flask googletrans==3.1.0a0 flask-cors flask-pydantic
 ```
@@ -43,11 +48,13 @@
 ```
 > $env:FLASK_APP="module"
 ```
+
 ## Run the app
 
 ```
 > flask run --reload
 ```
+
 # 🔥 Usage
 
 ## ⭐⭐ V2 ⭐⭐
@@ -82,9 +89,18 @@ POST
 {
   "texts": {
     "text1": "The first text to translate",
-    "text2": "the second text to translate",
     "randomFieldName": "the third text to translate",
-    "helloworld": "font icons for all projects, large or small"
+    "helloworld": "font icons for all projects, large or small",
+    "an_array": [
+      {
+        "field1": "A first field",
+        "field2": "A second field"
+      },
+      {
+        "field3": "A fird field",
+        "field4": "A fourth field"
+      }
+    ]
   },
   "to_language": "fr"
 }
@@ -97,10 +113,19 @@ POST
   "from_language": "auto",
   "to_language": "fr",
   "translated": {
-    "text1": "Le premier texte à traduire",
-    "text2": "Le deuxième texte à traduire",
+    "an_array": [
+      {
+        "field1": "Un premier champ",
+        "field2": "Un deuxième champ"
+      },
+      {
+        "field3": "Un troisième champ",
+        "field4": "Un quatrième champ"
+      }
+    ],
+    "helloworld": "Icônes de police pour tous les projets, grands ou petits",
     "randomFieldName": "Le troisième texte à traduire",
-    "helloworld": "icônes de police pour tous les projets, grands ou petits"
+    "text1": "Le premier texte à traduire"
   }
 }
 ```
