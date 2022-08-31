@@ -1,4 +1,3 @@
-from multiprocessing.dummy import Array
 import re
 from module.services.translation.translation_service import translate_from_google
 from module.models.translation.TranslationModelV1 import TranslationModelV1
