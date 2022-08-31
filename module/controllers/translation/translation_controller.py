@@ -24,16 +24,6 @@ def translate_v2(translation_body_v2: TranslationModelV2):
             elif(type(field) is dict):
                 insert_strings_to_text_arr(field,tab)
         return 1
-        
-    # Function to replace all texts of an object into strings passed to the tab
-    def insert_translated_texts(texts_dict,tab, index):
-        for attr in texts_dict:
-            if(type(texts_dict[attr]) is str):
-                texts_dict[attr] = set_first_letter_upper_and_remove_spaces(tab[index])
-                index+=1
-            elif(type(texts_dict[attr] is dict)):
-                insert_translated_texts(texts_dict[attr], tab, index)
-        return 1
     # An array that will contain the values of the texts to translate
     arr_to_translate = []
     insert_strings_to_text_arr(texts,arr_to_translate)
@@ -46,6 +36,15 @@ def translate_v2(translation_body_v2: TranslationModelV2):
     translated_text = re.sub(pattern,'||',translated_text)
     # An array with the translated_text splited with ||
     translated_arr = translated_text.split("||")
+    # Function to replace all texts of an object into strings passed to the tab
+    def insert_translated_texts(texts_dict,tab, index):
+        for attr in texts_dict:
+            if(type(texts_dict[attr]) is str):
+                texts_dict[attr] = set_first_letter_upper_and_remove_spaces(tab[index])
+                index+=1
+            elif(type(texts_dict[attr] is dict)):
+                insert_translated_texts(texts_dict[attr], tab, index)
+        return 1
     insert_translated_texts(texts, translated_arr, 0)
     # Payload of the response
     res = {
