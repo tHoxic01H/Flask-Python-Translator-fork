@@ -4,11 +4,15 @@
 💯🔥</p>
 
 # 🔥 Setup
+<<<<<<< Updated upstream
 !! ( Go to the usage section if you want to test it right away from my server )
 ## Packages
 ```
 > pip install "Flask[async]" flask-pydantic flask googletrans==3.1.0a0
 ```
+=======
+
+>>>>>>> Stashed changes
 ## Create a virtual environment for python
 
 ```
@@ -22,9 +26,8 @@
 ```
 
 ## Packages
-
 ```
-> pip install flask
+> pip install "Flask[async]" flask-pydantic flask googletrans==3.1.0a0 flask-cors flask-pydantic
 ```
 
 ## Save all project dependencies to a file
@@ -42,7 +45,7 @@
 ## Setting the env variable
 
 ```
-> $env:FLASK_APP = "module"
+> $env:FLASK_APP="module"
 ```
 ## Run the app
 
