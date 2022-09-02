@@ -25,8 +25,8 @@ def translate_v2(translation_body_v2: TranslationModelV2):
         else:
             for attr in texts_dict:
                 field = texts_dict[attr]
-                if (type(field) is str):
-                    tab.append(field.replace("||", ""))
+                if (type(field) is str or type(field) is int or type(field) is float):
+                    tab.append(str(field).replace("||", ""))
                 elif (type(field) is dict):
                     insert_strings_to_text_arr(field, tab)
                 elif (type(field) is list):
@@ -34,7 +34,7 @@ def translate_v2(translation_body_v2: TranslationModelV2):
         return 1
 
     # Function to replace all texts of an object into strings passed to the tab
-    # Arguments : 
+    # Arguments :
     #   texts_dict : the dictionnary to put the translated texts
     #   tab : a tab of the translated texts
     #   obj_index : an object containing an index field (ex : {"index":0})
@@ -44,8 +44,8 @@ def translate_v2(translation_body_v2: TranslationModelV2):
                 insert_translated_texts(texts_dict[x], tab, obj_index)
         else:
             for attr in texts_dict:
-                if (type(texts_dict[attr]) is str):
-                    texts_dict[attr] = set_first_letter_upper_and_remove_spaces(tab[obj_index['index']])
+                if (type(texts_dict[attr]) is str or type(texts_dict[attr]) is int or type(texts_dict[attr]) is float):
+                    texts_dict[attr] = set_first_letter_upper_and_remove_spaces(str(tab[obj_index['index']]))
                     obj_index['index'] = obj_index['index']+1
                 elif (type(texts_dict[attr] is dict)):
                     insert_translated_texts(texts_dict[attr], tab, obj_index)
@@ -113,10 +113,10 @@ def translate_v2_0(translation_body_v2: TranslationModelV2):
     i = 0
     for attr in texts:
         try:
-            texts[attr] = set_first_letter_upper_and_remove_spaces(
-                translated_arr[i])
+            text_to_add = set_first_letter_upper_and_remove_spaces(translated_arr[i])
+            texts[attr] = int(text_to_add) if str(text_to_add).isnumeric() else str(text_to_add)
         except:
-            print('y')
+            print("An error occured")
         i += 1
 
     # Payload of the response
