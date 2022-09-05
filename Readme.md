@@ -3,60 +3,7 @@
 <p align='center' style="font-size:25px;">🔥💯 V2 now supports multiple translations
 💯🔥</p>
 
-# 🔥 Setup
-
-!! ( Go to the usage section if you want to test it right away from my server )
-
-## Packages
-
-```
-> pip install "Flask[async]" flask-pydantic flask googletrans==3.1.0a0
-```
-
-## Create a virtual environment for python
-
-```
-> python -m venv env
-```
-
-## Activate the virtual environment
-
-```
-> env\Scripts\activate
-```
-
-## Packages
-
-```
-> pip install "Flask[async]" flask-pydantic flask googletrans==3.1.0a0 flask-cors flask-pydantic
-```
-
-## Save all project dependencies to a file
-
-```
-> pip freeze > requirements.txt
-```
-
-## To install the dependencies mentioned in requirements.txt
-
-```
-> pip install -r requirements.txt
-```
-
-## Setting the env variable
-
-```
-> $env:FLASK_APP="module"
-```
-
-## Run the app
-
-```
-> flask run --reload
-```
-
 # 🔥 Usage
-
 ## ⭐⭐ V2 ⭐⭐
 
 ### ✅ Url
@@ -174,3 +121,55 @@ POST
   "translated": "Wikipedia fournit tout son contenu gratuitement, sans publicité, et sans utiliser l'exploitation des données personnelles de ses utilisateurs."
 }
 ```
+# 🔥 Setup
+
+!! ( Go to the usage section if you want to test it right away from my server )
+
+## Packages
+
+```
+> pip install "Flask[async]" flask-pydantic flask googletrans==3.1.0a0
+```
+
+## Create a virtual environment for python
+
+```
+> python -m venv env
+```
+
+## Activate the virtual environment
+
+```
+> env\Scripts\activate
+```
+
+## Packages
+
+```
+> pip install "Flask[async]" flask-pydantic flask googletrans==3.1.0a0 flask-cors flask-pydantic
+```
+
+## Save all project dependencies to a file
+
+```
+> pip freeze > requirements.txt
+```
+
+## To install the dependencies mentioned in requirements.txt
+
+```
+> pip install -r requirements.txt
+```
+
+## Setting the env variable
+
+```
+> $env:FLASK_APP="module"
+```
+
+## Run the app
+
+```
+> flask run --reload
+```
+
