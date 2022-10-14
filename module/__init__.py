@@ -43,4 +43,4 @@ def translate_function_v1(body: TranslationModelV1):
     return res
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(port=6000, debug=True, threaded=True)
